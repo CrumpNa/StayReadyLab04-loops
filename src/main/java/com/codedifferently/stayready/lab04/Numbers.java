@@ -1,4 +1,5 @@
 package com.codedifferently.stayready.lab04;
+import java.util.Random;
 
 
 public class Numbers {
@@ -60,17 +61,22 @@ public class Numbers {
         }
         return pows;}
 
-        /*1:
-        random4()
-2: *** Output ***
-3: 3
-4: 5
-5: 2
-6: 8
 
-*/
+
     //change to a bool, returns true if contains correct stuff
-    public boolean random4(){
+    public String random4() {
+        int numRands = 4; //number of random numbers to output
+        String listRands = "1: random4()\n" + "2: *** Output ***";//list of random numbers
+        Random random = new Random();
+        for (int i = 0; i < numRands; i++) {
+            listRands += "\n";
+            listRands = listRands + (i + 3) + ": ";
+            listRands += random.nextInt(10) - 1;
+        }
+        return listRands;
+    }
+
+        /*
         int numRands=4; //number of random numbers to output 
         String listRands="1: random4()\n" +"2: *** Output ***\n";//list of random numbers
         int randomNum=0;//random number variable
@@ -95,7 +101,7 @@ public class Numbers {
 
         } //if all true means random generator is working
         System.out.print(listRands);
-        return c;
+        return c;*/
     }
 
-}
+

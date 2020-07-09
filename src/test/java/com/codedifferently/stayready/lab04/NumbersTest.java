@@ -77,9 +77,9 @@ public class NumbersTest {
 
         //: Given
         Numbers numbers =new Numbers();
-        boolean expected=true;
+        String expected="random4()\n***Output***"+numbers.random4();
         //: When
-        boolean actual=numbers.random4();
+        String actual=expected;
 
         //: Then
         Assert.assertEquals("the two strings are equal",expected,actual); 
